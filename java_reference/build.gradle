@@ -1,0 +1,41 @@
+// Loan Desk - Java reference solution (CODESPRINT 2026 Post-Secondary Bootcamp).
+//
+//   gradle run                       -> runs against ./catalogue.json
+//   gradle run --args="other.json"   -> runs against a file you choose
+//
+// The 'application' plugin puts Gson on the classpath and gives a one-command
+// build-and-run, so there is nothing else to configure.
+
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // The only third-party dependency: a small, single-jar JSON library.
+    implementation 'com.google.code.gson:gson:2.11.0'
+}
+
+application {
+    // The class lives in the default package (src/main/java/LoansDeskReference.java).
+    mainClass = 'LoansDeskReference'
+}
+
+// Compile for Java 17+ so the reference runs on any recent JDK, not only 25.
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// The program is interactive, so let `gradle run` read from the real console.
+run {
+    standardInput = System.in
+    // Gradle runs the app in the Gradle daemon and pipes its output, so neither
+    // Gradle nor the app can detect the terminal. Ask the app to emit colour.
+    // (Redirecting `gradle run` to a file will then include colour codes; run
+    //  with NO_COLOR=1, or `gradle run` piped, to get plain text.)
+    environment 'FORCE_COLOR', '1'
+}

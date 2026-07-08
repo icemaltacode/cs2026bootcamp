@@ -1,0 +1,58 @@
+# ===========================================================================
+#  CODESPRINT 2026 - Post-Secondary Bootcamp
+# ===========================================================================
+
+# --- Task sheet source -----------------------------------------------------
+# The editable Word source is kept locally but not published; only the
+# exported PDF is distributed.
+*.docx
+~$*.docx          # Word lock/temp files
+
+# --- Python (python_reference) ---------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+
+# --- Java / Gradle (java_reference) ----------------------------------------
+# Build output and the Gradle cache are generated; the wrapper is NOT.
+.gradle/
+build/
+bin/
+out/
+*.class
+
+# Keep the Gradle wrapper itself in the repo (do not ignore it):
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradlew
+!gradlew.bat
+
+# Locally downloaded Gson jar (Option 3 in java_reference/README.md).
+# NOTE: this must not match the wrapper jar above, so it is scoped to gson.
+gson*.jar
+
+# --- Program runtime artifacts ---------------------------------------------
+# The reference programs write a rolling backup and an atomic-save temp file
+# next to the catalogue. The starter catalogue.json itself is kept.
+*.bak
+*.tmp
+.*.tmp
+
+# --- IDE / editor ----------------------------------------------------------
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# --- OS junk ---------------------------------------------------------------
+.DS_Store
+.AppleDouble
+__MACOSX/
+Thumbs.db
+desktop.ini

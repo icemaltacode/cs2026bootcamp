@@ -1,0 +1,66 @@
+[
+  {
+    "type": "laptop",
+    "id": 1,
+    "name": "ThinkPad X1 Carbon",
+    "available": true,
+    "os": "Fedora 43",
+    "ram_gb": 32
+  },
+  {
+    "type": "laptop",
+    "id": 2,
+    "name": "Dell Latitude 5440",
+    "available": false,
+    "os": "Windows 11",
+    "ram_gb": 16
+  },
+  {
+    "type": "camera",
+    "id": 3,
+    "name": "Canon EOS R50",
+    "available": true,
+    "megapixels": 24,
+    "lenses": ["18-45mm kit", "50mm prime"]
+  },
+  {
+    "type": "camera",
+    "id": 4,
+    "name": "Sony Alpha A6400",
+    "available": false,
+    "megapixels": 24,
+    "lenses": ["16-50mm kit", "35mm prime", "55-210mm telephoto"]
+  },
+  {
+    "type": "robotics kit",
+    "id": 5,
+    "name": "LEGO SPIKE Prime",
+    "available": true,
+    "pieces": 528,
+    "age_range": "10-14"
+  },
+  {
+    "type": "robotics kit",
+    "id": 6,
+    "name": "micro:bit Go Bundle",
+    "available": true,
+    "pieces": 12,
+    "age_range": "8-12"
+  },
+  {
+    "type": "laptop",
+    "id": 7,
+    "name": "MacBook Air M2",
+    "available": true,
+    "os": "macOS Sonoma",
+    "ram_gb": 8
+  },
+  {
+    "type": "camera",
+    "id": 8,
+    "name": "GoPro HERO12",
+    "available": false,
+    "megapixels": 27,
+    "lenses": []
+  }
+]
